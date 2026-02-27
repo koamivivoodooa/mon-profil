@@ -56,12 +56,11 @@
             justify-content: center;
         }
 
-        /* --- Décoration Photo --- */
         .photo-frame {
             position: relative;
             width: 120px;
             height: 120px;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -108,7 +107,7 @@
         }
 
         .tagline {
-            font-size: 17px;
+            font-size: 19px; /* Taille augmentée */
             color: var(--custom-purple);
             font-weight: 800;
             margin-top: 6px;
@@ -117,7 +116,7 @@
         }
 
         .titles-container {
-            margin: 25px 0;
+            margin: 20px 0;
             border-top: 1px solid var(--soft-gray);
             border-bottom: 1px solid var(--soft-gray);
             padding: 12px 0;
@@ -135,12 +134,11 @@
             padding: 0 10px;
         }
 
-        /* --- Social Hover Effects --- */
         .social-row {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .social-icon {
@@ -161,7 +159,6 @@
             transform: translateY(-5px) scale(1.1);
             color: white;
             border-color: transparent;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .social-icon.whatsapp:hover { background-color: var(--whatsapp-color); }
@@ -170,7 +167,6 @@
         .social-icon.instagram:hover { background-color: var(--instagram-color); }
         .social-icon.tiktok:hover { background-color: var(--tiktok-color); }
 
-        /* --- Contact Buttons Hover --- */
         .contact-area {
             display: flex;
             flex-direction: column;
@@ -195,17 +191,13 @@
             font-weight: 700;
             color: var(--pure-black);
             transition: all 0.3s ease;
-            border: 1px solid transparent;
         }
 
-        /* Effet survol numéros */
         .contact-btn:hover {
             background-color: #e8e6ff;
-            border-color: var(--custom-purple);
             transform: scale(1.02);
         }
 
-        /* Effet survol email */
         .email-special {
             background: var(--custom-purple);
             color: white;
@@ -213,12 +205,11 @@
 
         .email-special:hover {
             background-color: var(--deep-vibe);
-            box-shadow: 0 5px 15px rgba(95, 43, 151, 0.3);
             transform: scale(1.02);
         }
 
         .projects-footer {
-            margin-top: 25px;
+            margin-top: 20px;
             font-size: 9px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -226,12 +217,15 @@
             font-weight: 600;
         }
 
+        /* Signature OAII mise à jour */
         .oaii-signature {
-            font-size: 10px;
-            color: #ddd;
+            font-size: 11px;
+            color: #888; /* Meilleure visibilité */
             margin-top: auto;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             letter-spacing: 1px;
+            font-weight: 500;
+            /* Pas de text-transform: uppercase pour garder les minuscules */
         }
     </style>
 </head>
