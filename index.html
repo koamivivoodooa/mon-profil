@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Koamivi Voodooa | Artisan du Rêve</title>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@800&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --pure-black: #000000;
+            --custom-purple: #5f2b97;
+            /* Couleur violet clair pour les boutons d'appel */
+            --light-purple-btn: #f1f0ff; 
+            --deep-vibe: #2d2a4a;
+            --soft-gray: #f2f2f2;
+            --whatsapp-color: #25D366;
+            --facebook-color: #1877F2;
+            --instagram-color: #E4405F;
+            --tiktok-color: #000000;
+        }
+
+        /* Suppression du scroll */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            width: 100%;
+            position: fixed;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: 'Sora', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--deep-vibe);
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+            padding: 20px;
+            /* Flexbox pour espacer le contenu et la signature OAII */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Conteneur principal pour le contenu du profil */
+        .profile-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .profile-photo-container {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    /* Un anneau blanc fin pour séparer la photo du dégradé */
+    border: 3px solid white; 
+    /* L'effet de décoration moderne : un dégradé subtil */
+    background: linear-gradient(135deg, #6c5ce7 0%, #5f2b97 100%); 
+    /* Une ombre douce pour donner du relief */
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.2); 
+    /* Centrage de la photo à l'intérieur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 { 
+            font-family: 'Host Grotesk', sans-serif;
+            font-size: 24px;
+            margin: 0;
+            color: var(--pure-black);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 17px;
+            color: var(--custom-purple);
+            font-weight: 600;
+            margin-top: 6px;
+            display: block;
+        }
+
+        .titles-container {
+            margin: 25px 0;
+            border-top: 1px solid var(--soft-gray);
+            border-bottom: 1px solid var(--soft-gray);
+            padding: 12px 0;
+            color: var(--pure-black);
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .hook {
+            font-size: 13.5px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-vibe);
+            text-decoration: none;
+            font-size: 18px;
+            border: 1px solid var(--soft-gray);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover { 
+            transform: translateY(-3px);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .social-icon.whatsapp:hover { background-color: var(--whatsapp-color); }
+        .social-icon.facebook:hover { background-color: var(--facebook-color); }
+        .social-icon.instagram:hover { background-color: var(--instagram-color); }
+        .social-icon.tiktok:hover { background-color: var(--tiktok-color); }
+
+        .contact-area {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .phone-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Couleur violet clair appliquée ici */
+            background: var(--light-purple-btn); 
+            border: 1px solid transparent;
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--pure-black);
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            border-color: var(--custom-purple);
+            background-color: #e8e6ff;
+        }
+
+        .email-special {
+            background: var(--custom-purple);
+            color: white;
+            border: none;
+        }
+
+        .email-special:hover {
+            background: var(--deep-vibe);
+            color: white !important; 
+        }
+
+        .projects-footer {
+            margin-top: 25px;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #bbb;
+            font-weight: 600;
+        }
+
+        /* Style pour la signature OAII */
+        .oaii-signature {
+            font-size: 10px;
+            color: #ccc;
+            margin-top: auto; /* Pousse vers le bas */
+            padding-top: 20px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <div class="profile-content">
+            <div class="profile-photo-container">
+                <img src="koamivi_photo.jpg" alt="Koamivi Voodooa" class="profile-photo">
+            </div>
+            
+            <h1>Koamivi Voodooa</h1>
+            <span class="tagline">Artisan du rêve</span>
+
+            <div class="titles-container">
+                Designer Graphique • Coach de Mannequin<br>
+                Chorégraphe de Mode • Directeur Artistique
+            </div>
+
+            <div class="hook">
+                Façonneur d'univers où l'image et l'émotion se rencontrent pour transformer chaque projet en expérience visuelle folle et envoûtante.
+            </div>
+
+            <div class="social-row">
+                <a href="https://wa.me/22890478773" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1C1hqqo6K9/" class="social-icon facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/koamivi_voodooa?igsh=MXE5cDRvcXU3Z3Zzbg==" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@koamivi_voodooa?_r=1&_t=ZS-94HTjaoFhMj" class="social-icon tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+
+            <div class="contact-area">
+                <div class="phone-row">
+                    <a href="tel:+22890478773" class="contact-btn">90 47 87 73</a>
+                    <a href="tel:+22899941421" class="contact-btn">99 94 14 21</a>
+                </div>
+                <a href="mailto:koamivivoodooa@gmail.com" class="contact-btn email-special">
+                    koamivivoodooa@gmail.com
+                </a>
+            </div>
+
+            <div class="projects-footer">
+                O'DI Startup • Pack'n Go • FFOF
+            </div>
+        </div>
+
+        <div class="oaii-signature">
+            Powered by OAII
+        </div>
+    </div>
+
+</body>
+</html>
